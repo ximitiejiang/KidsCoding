@@ -16,10 +16,10 @@ also included a [kc](https://github.com/ximitiejiang/KidsCoding/tree/master/kc) 
 ### [lesson_6](https://github.com/ximitiejiang/KidsCoding/blob/master/lesson_6.py)
 
 ![kids works](https://github.com/ximitiejiang/KidsCoding/blob/master/kc/imgs/robot.png)
+![kids works](https://github.com/ximitiejiang/KidsCoding/blob/master/kc/imgs/star.png)
+### How to use kc package
 
-### How to use
-
-import class from kc lib, create object paper, draw, and ant.
+import class from kc package, create object paper, draw, and ant.
 when you create draw and ant, you should tell them where they can run,
 so paper object should transfer to them, then you can use the object to draw.
 ```
@@ -28,6 +28,6 @@ paper = PAPER(size=[m,n])
 draw = DRAW(paper)
 ant = ANT(paper)
 ```
-a [demo](https://github.com/ximitiejiang/KidsCoding/blob/master/kc/demo.py) can be a good start.
+a [demo](https://github.com/ximitiejiang/KidsCoding/blob/master/kc/demo.py) here can be a good start to learn to use it.
 
 Happy Coding! 
