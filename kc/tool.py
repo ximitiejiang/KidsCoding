@@ -139,12 +139,12 @@ class ANT():
     def turn_round(self):
         self.angle += 180*np.pi/180
     
-    def jumpback(self, x=[1,1]):
+    def jump_back(self, x=[1,1]):
         self.x0 = [self.home[0],self.home[1]]     
         self.x1 = [self.x0[0],self.x0[1]]
         self.angle = 0
         
-    def jumpto(self, x):
+    def jump_to(self, x):
         self.x0[0]=x[0]
         self.x0[1]=x[1]
         self.angle=0
@@ -158,24 +158,8 @@ if __name__ == '__main__':
 
     draw.rectangle([1,1],w=3,h=4,color='g',fill_in=True)    
     draw.triangle([1,1],[4,2],[2,5],color='b',fill_in=True)
-
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
-    ant.turn_left(45)
-    ant.move(0.5)
     
-    ant.jumpback()
+    ant.jump_back()
     for i in range(10):
         ant.move(i+1)
         ant.turn_right(90)
@@ -186,25 +170,6 @@ if __name__ == '__main__':
         ant.move(i+1)
         ant.turn_right(90)
     
-    ant.jumpto([4,4])
-    for i in range(4):
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        ant.move(i)
-        ant.turn_left(45)
-        
         
         
         

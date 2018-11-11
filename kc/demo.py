@@ -41,7 +41,7 @@ def ant_dance():
     paper = PAPER(size=[6,8])
     ant = ANT(paper)
     
-    ant.jumpto([2,2])
+    ant.jump_to([2,2])
     for i in range(40):
         ant.move(5)
         ant.turn_left(160)

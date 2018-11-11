@@ -5,14 +5,21 @@ Created on Sat Nov 10 17:20:32 2018
 
 @author: ubuntu
 """
-from kc.draw import DRAW
-import matplotlib.pyplot as plt
-draw = DRAW(figsize=[6,13])
+# learn tkint
 
+from kc.tool import PAPER, ANT
+paper = PAPER()
+eason = ANT(paper)
     
-plt.xlim(-1,6)
-plt.ylim(0,16)
+eason.jump_back()
 
-for i in range(10):
-    draw.circle([3,3+1*i],r=2)
-    
+for i in range(50):
+    eason.move(i)
+    eason.turn_left(90)
+
+#    eason.move(i)
+#    eason.turn_left(90)
+#    eason.move(2)
+#    eason.turn_left(90)
+#    eason.move(2)
+#    eason.turn.left(90)
