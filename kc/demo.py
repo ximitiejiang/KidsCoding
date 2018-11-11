@@ -5,11 +5,13 @@ Created on Sat Nov 10 11:44:20 2018
 
 @author: ubuntu
 """
-from draw import DRAW
+from tool import PAPER, DRAW, ANT
 import matplotlib.pyplot as plt
-draw = DRAW(figsize=[6,8])
 
 def draw_robot():
+    
+    paper = PAPER(size=[6,8])
+    draw = DRAW(paper)
     
     plt.xlim(-1,6)
     plt.ylim(0,6)
@@ -34,6 +36,20 @@ def draw_robot():
     draw.ellipse([0.6,3],w=3,h=1,color='g',fill_in=True,angle=60)
     draw.ellipse([4.2,3],w=3,h=1,color='g',fill_in=True,angle=120)   
     
-#    draw.line([-0.5,0],[5.5,0])
+
+def ant_dance():
+    paper = PAPER(size=[6,8])
+    ant = ANT(paper)
     
+    ant.jumpto([2,2])
+    for i in range(40):
+        ant.move(5)
+        ant.turn_left(160)
+        ant.move(5)
+        ant.turn_round()
+        ant.turn_left(30)
+      
+
 draw_robot()
+
+ant_dance()
