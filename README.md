@@ -15,3 +15,4 @@ also included a [kc](https://github.com/ximitiejiang/KidsCoding/tree/master/kc) 
 
 ### [lesson_6]()
 
+![kids works](https://github.com/ximitiejiang/KidsCoding/blob/master/kc/imgs/robot.png)
