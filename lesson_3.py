@@ -21,4 +21,11 @@ Created on Thu Nov  1 20:21:41 2018
 2!=2
 
 if 2<0:
-    print('that is True')
+    print('this is Not True')
+
+elif 2==0:
+    print('this is Not True')
+elif 2>0:
+    print('this is True')
+else:
+    pass

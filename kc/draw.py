@@ -40,15 +40,15 @@ class DRAW():
         plt.plot(x,y,color=color)
     
     
-    def circle(self, c=[0.,0.],r=1.0,color = 'b',color_in=None):
+    def circle(self, c=[0.,0.],r=1.0,color = 'b',fill_in=None):
         from matplotlib.patches import Circle
-        cir = Circle(xy = c, radius=r, color=color, fill = color_in)
+        cir = Circle(xy = c, radius=r, color=color, fill = fill_in)
         self.ax1.add_patch(cir)
         
         
-    def ellipse(self, c=[0.,0.],h=2.0,w=1.0,color = 'c', color_in=None,angle=0):
+    def ellipse(self, c=[0.,0.],h=2.0,w=1.0,color = 'c', fill_in=None,angle=0):
         from matplotlib.patches import Ellipse
-        ell = Ellipse(xy = c, width=w, height=h, color=color,fill=color_in,angle=angle)
+        ell = Ellipse(xy = c, width=w, height=h, color=color,fill=fill_in,angle=angle)
         self.ax1.add_patch(ell)
 
     
@@ -59,7 +59,7 @@ class DRAW():
         self.line(x4,x1,color=color)
     
     
-    def rectangle(self,x=[0.,0.], h=1.0, w=1.0, color='k',color_in=None):
+    def rectangle(self,x=[0.,0.], h=1.0, w=1.0, color='k',fill_in=None):
         '''x为左下角坐标，h为高，w为宽
         '''
         xlb = [x[0],x[1]]
@@ -72,7 +72,7 @@ class DRAW():
         self.line(xrt,xrb,color=color)
         self.line(xrb,xlb,color=color)
         
-        if color_in:
+        if fill_in:
             plt.fill_between([x[0],x[0]+w],
                              [x[1],x[1]],
                              [x[1]+h,x[1]+h], facecolor=color)        
@@ -92,12 +92,12 @@ class DRAW():
         return mid_y
         
     
-    def triangle(self, x1,x2,x3,color='m',color_in=None):
+    def triangle(self, x1,x2,x3,color='m',fill_in=None):
         self.line(x1,x2,color=color)
         self.line(x2,x3,color=color)
         self.line(x3,x1,color=color)
         
-        if color_in:
+        if fill_in:
             import numpy as np
             x = np.vstack((x1,x2,x3))
             index = np.argsort(x[:,0])                 # x坐标从小到大排序
@@ -113,6 +113,6 @@ if __name__ == '__main__':
 #    plt.xlim(-1,8)
 #    plt.ylim(0,6)
 
-    draw.rectangle([1,1],w=3,h=4,color='g',color_in=True)
+    draw.rectangle([1,1],w=3,h=4,color='g',fill_in=True)
     
-    draw.triangle([1,1],[4,2],[2,5],color='b',color_in=True)
+    draw.triangle([1,1],[4,2],[2,5],color='b',fill_in=True)
